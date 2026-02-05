@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 15, 23, 42;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  min-height: 100vh;
+}
+
+/* Leaflet overrides for dark theme */
+.leaflet-popup-content-wrapper {
+  background: rgba(26, 26, 46, 0.95);
+  color: white;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.leaflet-popup-tip {
+  background: rgba(26, 26, 46, 0.95);
+}
+
+.leaflet-container {
+  font-family: inherit;
+}
+
+/* Custom marker hover */
+.custom-marker:hover > div {
+  transform: scale(1.1);
+}
